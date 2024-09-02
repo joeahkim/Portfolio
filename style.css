@@ -1,4 +1,49 @@
-svg {
-    padding-left: 20dp;
+.hero-section {
+    height: 100vh;
+    /* Full screen height */
+    position: relative;
+    /* Context for absolutely positioned elements */
+}
 
+.floating-svg {
+    position: absolute;
+    /* Start as absolute within the hero section */
+    transition: all 0.3s ease;
+    /* Smooth transition */
+}
+
+#github-icon {
+    top: 80px;
+    /* Adjust as needed */
+    left: 20px;
+    /* Adjust as needed */
+}
+
+#twitter-icon {
+    top: 80px;
+    /* Adjust as needed */
+    left: 20px;
+    /* Adjust as needed */
+}
+
+#linkedin-icon {
+    top: 140px;
+    /* Adjust as needed */
+    left: 20px;
+    /* Adjust as needed */
+}
+
+#instagram-icon {
+    top: 200px;
+    /* Adjust as needed */
+    left: 20px;
+    /* Adjust as needed */
+}
+
+.floating-svg.fixed {
+    position: fixed;
+    top: 40px;
+    /* Keep the same top position */
+    left: 20px;
+    /* Keep the same left position */
 }
