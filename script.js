@@ -1,19 +1,22 @@
 document.addEventListener('scroll', function () {
     const heroSection = document.querySelector('.hero-section');
+    const svgContainer = document.querySelector('.svg-container');
     const svgIcons = document.querySelectorAll('.floating-svg');
 
-    // Get the bottom position of the hero section
     const heroBottom = heroSection.getBoundingClientRect().bottom;
 
-    svgIcons.forEach((icon, index) => {
-        if (heroBottom <= 0) {
-            // User has scrolled past the hero section
+    if (heroBottom <= 0) {
+        svgIcons.forEach((icon, index) => {
             icon.classList.add('fixed');
-            icon.style.top = `${20 + index * 60}px`; // Adjust top position based on index
-        } else {
-            // User is back in the hero section
+            icon.style.top = `${150 + index * 60}px`;
+            icon.style.left = '20px';
+        });
+    } else {
+        // User is back in the hero section
+        svgIcons.forEach(icon => {
             icon.classList.remove('fixed');
-            icon.style.top = `${20 + index * 60}px`; // Reset top position
-        }
-    });
+            icon.style.top = 'auto';
+            icon.style.left = 'auto'; // Reset the left position
+        });
+    }
 });

@@ -1,49 +1,82 @@
 .hero-section {
-    height: 100vh;
-    /* Full screen height */
     position: relative;
-    /* Context for absolutely positioned elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
 }
 
 .floating-svg {
-    position: absolute;
-    /* Start as absolute within the hero section */
-    transition: all 0.3s ease;
-    /* Smooth transition */
-}
-
-#github-icon {
-    top: 80px;
-    /* Adjust as needed */
-    left: 20px;
-    /* Adjust as needed */
-}
-
-#twitter-icon {
-    top: 80px;
-    /* Adjust as needed */
-    left: 20px;
-    /* Adjust as needed */
-}
-
-#linkedin-icon {
-    top: 140px;
-    /* Adjust as needed */
-    left: 20px;
-    /* Adjust as needed */
-}
-
-#instagram-icon {
-    top: 200px;
-    /* Adjust as needed */
-    left: 20px;
-    /* Adjust as needed */
+    position: relative;
+    transition: all 0.15s ease;
 }
 
 .floating-svg.fixed {
     position: fixed;
-    top: 40px;
-    /* Keep the same top position */
+    top: 20px;
     left: 20px;
-    /* Keep the same left position */
+}
+
+
+.circle-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.center-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.ring {
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: #3498db;
+    animation: rotate 5s linear infinite;
+    z-index: 1;
+}
+
+.ring1 {
+    width: 220px;
+    height: 220px;
+    top: -10px;
+    left: -10px;
+}
+
+.ring2 {
+    width: 240px;
+    height: 240px;
+    top: -20px;
+    left: -20px;
+    animation-duration: 6s;
+}
+
+.ring3 {
+    width: 260px;
+    height: 260px;
+    top: -30px;
+    left: -30px;
+    animation-duration: 7s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
