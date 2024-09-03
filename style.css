@@ -80,3 +80,14 @@
         transform: rotate(360deg);
     }
 }
+
+@media (max-width: 576px) {
+    .svg-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .floating-svg {
+        margin: 0 10px;
+    }
+}
