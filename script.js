@@ -12,11 +12,10 @@ document.addEventListener('scroll', function () {
             icon.style.left = '20px';
         });
     } else {
-        // User is back in the hero section
         svgIcons.forEach(icon => {
             icon.classList.remove('fixed');
             icon.style.top = 'auto';
-            icon.style.left = 'auto'; // Reset the left position
+            icon.style.left = 'auto';
         });
     }
 });
