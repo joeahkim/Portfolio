@@ -15,7 +15,9 @@
 
 .floating-svg {
     position: relative;
+    padding-left: 20px;
     transition: all 0.15s ease;
+    z-index: 10000;
 }
 
 .floating-svg.fixed {
@@ -87,7 +89,13 @@
         justify-content: center;
     }
 
-    .floating-svg {
-        margin: 0 10px;
-    }
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
