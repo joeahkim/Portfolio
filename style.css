@@ -45,13 +45,9 @@ nav {
     position: relative;
     width: 200px;
     height: 200px;
-    transition: box-shadow 0.3s ease;
-    border-radius: 50%;
 }
 
-.circle-container:hover {
-    box-shadow: 0 0 30px 20px rgba(52, 152, 219, 0.6);
-}
+
 
 .center-image {
     width: 100%;
