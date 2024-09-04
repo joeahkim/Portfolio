@@ -19,3 +19,30 @@ document.addEventListener('scroll', function () {
         });
     }
 });
+const circleContainer = document.querySelector('.ring3');
+
+circleContainer.addEventListener('mousemove', function (e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const dx = x - centerX;
+    const dy = y - centerY;
+
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
+
+    const glowStrength = (1 - distance / maxDistance) * 0.6; // Adjust glow strength
+
+    this.style.boxShadow = `${dx / 10}px ${dy / 10}px 40px 30px rgba(52, 152, 219, ${glowStrength})`;
+    this.style.transform = `rotateX(${dy / 10}deg) rotateY(${dx / 10}deg)`;
+});
+
+circleContainer.addEventListener('mouseleave', function () {
+    // Reset the box-shadow and transform when the mouse leaves
+    this.style.boxShadow = `0 0 0 0 rgba(52, 152, 219, 0)`;
+    this.style.transform = 'rotateX(0) rotateY(0)';
+});
