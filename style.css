@@ -15,9 +15,10 @@ body {
 .hero-section {
     position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 .svg-container {
@@ -43,8 +44,12 @@ body {
 
 .circle-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 200px;
+
 }
 
 
@@ -55,6 +60,11 @@ body {
     border-radius: 50%;
     position: relative;
     z-index: 2;
+}
+
+h1,
+p {
+    text-align: center;
 }
 
 .ring {
@@ -105,7 +115,6 @@ body {
 @media (max-width: 576px) {
     .svg-container {
         flex-direction: column;
-
         justify-content: center;
     }
 
