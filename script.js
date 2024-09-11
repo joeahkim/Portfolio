@@ -1,10 +1,17 @@
+document.addEventListener("mousemove", function (e) {
+    const bg = document.querySelector(".animated-bg");
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+
+    bg.style.backgroundPosition = `${mouseX * 100}% ${mouseY * 100}%`;
+});
 
 let currentSection = 0;
 const sections = document.querySelectorAll('.section');
 
 // Function to scroll to the specific section
 function scrollToSection(sectionIndex) {
-    sections[sectionIndex].scrollIntoView({ behavior: 'smooth' });
+    sections[sectionIndex].scrollIntoView({ behavior: 'auto' });
 }
 
 // Add scroll event listener

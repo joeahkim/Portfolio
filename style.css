@@ -5,6 +5,17 @@ body {
     overflow: hidden;
 }
 
+.animated-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/icons/carbg.jpg');
+    /* Add your own image */
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.1s ease-out;
+}
+
 .section {
     height: 100vh;
     display: flex;
