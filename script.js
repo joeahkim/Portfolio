@@ -1,10 +1,3 @@
-document.addEventListener("mousemove", function (e) {
-    const bg = document.querySelector(".animated-bg");
-    const mouseX = e.clientX / window.innerWidth;
-    const mouseY = e.clientY / window.innerHeight;
-
-    bg.style.backgroundPosition = `${mouseX * 100}% ${mouseY * 100}%`;
-});
 
 let currentSection = 0;
 const sections = document.querySelectorAll('.section');
