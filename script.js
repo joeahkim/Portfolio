@@ -1,46 +1,46 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         console.log(entry)
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('show');
 
-        } else {
-            entry.target.classList.remove('show')
-        }
-    });
-});
+//         } else {
+//             entry.target.classList.remove('show')
+//         }
+//     });
+// });
 
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
+// const hiddenElements = document.querySelectorAll('.hidden');
+// hiddenElements.forEach((el) => observer.observe(el));
 
 
-let currentSection = 0;
-const sections = document.querySelectorAll('.section');
+// let currentSection = 0;
+// const sections = document.querySelectorAll('.section');
 
-// Function to scroll to the specific section
-function scrollToSection(sectionIndex) {
-    sections[sectionIndex].scrollIntoView({ behavior: 'auto' });
-}
+// // Function to scroll to the specific section
+// function scrollToSection(sectionIndex) {
+//     sections[sectionIndex].scrollIntoView({ behavior: 'auto' });
+// }
 
-// Add scroll event listener
-window.addEventListener('wheel', (event) => {
-    if (event.deltaY > 0) {
-        currentSection = Math.min(currentSection + 1, sections.length - 1);
-    } else {
-        currentSection = Math.max(currentSection - 1, 0);
-    }
-    scrollToSection(currentSection);
-});
+// // Add scroll event listener
+// window.addEventListener('wheel', (event) => {
+//     if (event.deltaY > 0) {
+//         currentSection = Math.min(currentSection + 1, sections.length - 1);
+//     } else {
+//         currentSection = Math.max(currentSection - 1, 0);
+//     }
+//     scrollToSection(currentSection);
+// });
 
-// Add keypress listener for Page Down/Arrow Keys
-window.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowDown' || event.key === 'PageDown') {
-        currentSection = Math.min(currentSection + 1, sections.length - 1);
-    } else if (event.key === 'ArrowUp' || event.key === 'PageUp') {
-        currentSection = Math.max(currentSection - 1, 0);
-    }
-    scrollToSection(currentSection);
-});
+// // Add keypress listener for Page Down/Arrow Keys
+// window.addEventListener('keydown', (event) => {
+//     if (event.key === 'ArrowDown' || event.key === 'PageDown') {
+//         currentSection = Math.min(currentSection + 1, sections.length - 1);
+//     } else if (event.key === 'ArrowUp' || event.key === 'PageUp') {
+//         currentSection = Math.max(currentSection - 1, 0);
+//     }
+//     scrollToSection(currentSection);
+// });
 
 document.addEventListener('scroll', function () {
     const heroSection = document.querySelector('.hero-section');
