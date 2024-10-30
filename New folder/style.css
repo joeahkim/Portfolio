@@ -67,7 +67,7 @@ span {
 }
 
 #menu-icon {
-    font-size: 35px;
+    font-size: 50px;
     z-index: 10001;
     cursor: pointer;
     display: none;
@@ -536,7 +536,7 @@ form .send-btn:hover {
     }
 }
 
-@media (max-width:950px) {
+@media (max-width:9500px) {
     :root {
         --h1-font: 3.5rem;
     }
