@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "myFirstFont";
+    src: url("../assets/fonts/Pretty\ Dahlia.otf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +17,7 @@
     --text-color: #fff;
     --bg-color: #1b1f24;
     --second-bg-color: #22282f;
-    --main-color: #13bbff;
+    --main-color: #c38eb4;
     --other-color: #c3cad5;
 
     --h1-font: 4.5rem;
@@ -120,7 +125,8 @@ section {
 }
 
 .main-content p {
-    font-size: var(--p-font);
+    font-family: "myFirstFont";
+    font-size: 40px;
     font-weight: 400;
     width: 620px;
     max-width: 100%;
@@ -356,7 +362,7 @@ header.sticky {
     font-size: 27px;
     border-radius: 50%;
     color: var(--text-color);
-    background: #075fe4;
+    background: #08d57f;
 
 }
 
@@ -443,7 +449,7 @@ form .send-btn:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #075fe4;
+    background: #08d57f;
     width: 45px;
     height: 45px;
     border-radius: 50%;
